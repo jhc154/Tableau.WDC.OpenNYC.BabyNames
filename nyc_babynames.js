@@ -35,21 +35,22 @@
 
     myConnector.getData = function(table, doneCallback) {
         //JSON link based on search result from data.gov
-        var apiCall = "https://data.cityofnewyork.us/resource/25th-nujf.json"
+        var apiCall = "https://data.cityofnewyork.us/api/views/25th-nujf/rows.json"
         $.getJSON(apiCall, function(resp) {
-
-            var feat = resp,
+            //capture the .data array as feat
+            var feat = resp.data,
                 tableData = [];
                 
-            //Iterate over the JSON object
+            //Iterate over the JSON object and push to table
+            //Omit headers for 0-7 for key data elements
             for (var i = 0, len = feat.length; i < len; i++) {
                 tableData.push({
-                    "BIRTH_YEAR": feat[i].brth_yr,
-                    "COUNT": feat[i].cnt,
-                    "ETHNICITY": feat[i].ethcty,
-                    "GENDER": feat[i].gndr,
-                    "NAME": feat[i].nm,
-                    "RANK": feat[i].rnk,
+                    "BIRTH_YEAR": feat[i][8],
+                    "GENDER": feat[i][9],
+                    "ETHNICITY": feat[i][10],
+                    "GENDER": feat[i][11],
+                    "COUNT": feat[i][12],
+                    "RANK": feat[i][13],
                 });
             }
 
