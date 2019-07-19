@@ -8,20 +8,20 @@
             id: "BIRTH_YEAR",
             dataType: tableau.dataTypeEnum.string
         }, {
-            id: "COUNT",
+            id: "GENDER",
             dataType: tableau.dataTypeEnum.string
         }, {
             id: "ETHNICITY",
             dataType: tableau.dataTypeEnum.string
         }, {
-            id: "GENDER",
-            dataType: tableau.dataTypeEnum.string
-        }, {
             id: "NAME",
             dataType: tableau.dataTypeEnum.string
         }, {
+            id: "COUNT",
+            dataType: tableau.dataTypeEnum.int
+        }, {
             id: "RANK",
-            dataType: tableau.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.int
         }];
 
         var tableSchema = {
