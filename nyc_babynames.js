@@ -48,7 +48,7 @@
                     "BIRTH_YEAR": feat[i][8],
                     "GENDER": feat[i][9],
                     "ETHNICITY": feat[i][10],
-                    "GENDER": feat[i][11],
+                    "NAME": feat[i][11],
                     "COUNT": feat[i][12],
                     "RANK": feat[i][13],
                 });
